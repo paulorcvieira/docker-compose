@@ -429,7 +429,7 @@ networks:
   myNetworks:
 ```
 
-Agora vamos testar, e para isso precisamos levantar a imagem, acessar o ssh e instalar o ``
+Agora vamos testar, e para isso precisamos levantar a imagem, acessar o ssh e instalar o `iputils-ping`
 
 ```bash
 $ docker-compose -f docker-compose-networks.yml up -d
