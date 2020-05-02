@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  nodejs:
+    build: .
+    image: paulorcvieira/ubuntu-sshd-nvm:latest
+    volumes:
+      - .:/workspace
+    ports:
+      - "22"
+      - "3030:3030"
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432"
+    volumes:
+      - ./crud-node-postgres/database:/var/lib/postgresql/data

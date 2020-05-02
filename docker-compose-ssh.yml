@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nodejs:
+    build: .
+    image: paulorcvieira/ubuntu-sshd-nvm:latest
+    volumes:
+      - .:/workspace
+    ports:
+      - "22"
+      - "3030"
